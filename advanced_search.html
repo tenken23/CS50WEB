@@ -1,19 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Search</title>
+        <title>Advanced Search</title>
         <style>
             form {
-                text-align: center;
+                text-align: left;
+                margin: 0px;
+            }
+
+            .links {
+                text-align: right;
+            }
+
+            .searchbar {
+                border-radius: 12px;
+                width: 500px;
+                height: 30px;
+                font-size: 15px;
+                padding: 5px;
+                border: 1px solid lightgrey
+            }
+
+            .advancedSearchButton {
+                border-radius: 2px;
+                width: 150px;
+                height: 40px;
+                font-size: 15px;
+                border: 1px solid #0066b2;
+                margin: 0px;
+                color: white;
+                background-color: #0066b2;
+            }
+
+            .descriptor {
+                width: 200px;
+                font-size: 15px;
+                font-family: Arial;
+                margin: 0px;
             }
         </style>
     </head>
     <body>
+        <div class="links">
+            <a href="index.html">Back to Main Search</a>
+        </div>
+        <p>Find Pages With...</p>
         <form action="https://www.google.com/search">
-            <input type="text" name="q">
+            <div class="descriptor">all these words:</div>
+            <input type="text" name="as_q" class="searchbar" placeholder="Three Rings for the Elven-kings under the sky,">
             <br/>
             <br/>
-            <input type="submit" value="Google Search">
+            <div class="descriptor">this exact word or phrase:</div>
+            <input type="text" name="as_epq" class="searchbar" placeholder="Seven for the Dwarf-lords in their halls of stone,">
+            <br/>
+            <br/>
+            <div class="descriptor">any of these words:</div>
+            <input type="text" name="as_oq" class="searchbar" placeholder="Nine for Mortal Men doomed to die,">
+            <br/>
+            <br/>
+            <div class="descriptor">none of these words:</div>
+            <input type="text" name="as_eq" class="searchbar" placeholder="One for the Dark Lord on his dark throne">
+            <br/>
+            <br/>
+            <input type="submit" value="Advanced Search" class="advancedSearchButton">
         </form>
     </body>
 </html>
