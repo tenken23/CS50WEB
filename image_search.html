@@ -1,19 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Search</title>
+        <title>Image Search</title>
         <style>
             form {
                 text-align: center;
+                margin: 300px;
+            }
+
+            .links {
+                text-align: right;
+            }
+
+            .searchbar {
+                border-radius: 12px;
+                width: 500px;
+                height: 30px;
+                font-size: 15px;
+                padding: 5px;
+                border: 1px solid lightgrey
+            }
+
+            .searchbutton {
+                border-radius: 6px;
+                width: 150px;
+                height: 40px;
+                font-size: 15px;
+                border: 1px solid white;
+                margin: 20px;
             }
         </style>
     </head>
     <body>
+        <div class="links">
+            <a href="index.html">Back to Main Search</a>
+        </div>
         <form action="https://www.google.com/search">
-            <input type="text" name="q">
+            <input type="text" name="q" class="searchbar">
             <br/>
             <br/>
-            <input type="submit" value="Google Search">
+            <input type="hidden" name="tbm" value="isch">
+            <input type="submit" value="Image Search" class="searchbutton">
         </form>
     </body>
 </html>
